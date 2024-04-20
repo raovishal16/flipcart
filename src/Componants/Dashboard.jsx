@@ -93,7 +93,7 @@ const Dashboard = () => {
           <div className="row gy-3 w-100">
             {filterProduct !== null &&
               filterProduct.map((item, index) => (
-                <div key={index} className="col-4 col-md-4">
+                <div key={index} className="col-md-4">
                   <div className="card proCard h-100">
                     <div className="product-img overflow-hidden">
                       <img

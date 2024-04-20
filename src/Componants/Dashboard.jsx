@@ -70,7 +70,7 @@ const Dashboard = () => {
   return (
     <Container className="my-3">
       <div className="row w-100">
-        <div className="col-3">
+        <div className="col-3 col-md-3">
           <div className="category">
             <div className="title py-1 px-2">
               <p className="h3">Category</p>
@@ -89,11 +89,11 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="col-9">
+        <div className="col-9 col-md-9">
           <div className="row gy-3 w-100">
             {filterProduct !== null &&
               filterProduct.map((item, index) => (
-                <div key={index} className="col-4">
+                <div key={index} className="col-4 col-md-4">
                   <div className="card proCard h-100">
                     <div className="product-img overflow-hidden">
                       <img

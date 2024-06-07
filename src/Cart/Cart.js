@@ -16,7 +16,7 @@ const Cart = () => {
         }
     }
     const handleDecrement = (index) => {
-        if (CartData[index].qty != 0) {
+        if (CartData[index].qty != 1) {
             dispatch(decrementData(index))
         } else {
             return
@@ -78,11 +78,11 @@ const Cart = () => {
                     </tbody>
                 </table>
                 <div className="d-flex justify-content-end">
-                    {/* <div className={addedCartData != false ? 'visible card py-3 px-5' : 'invisible'}> */}
-                    <div>
-                        <h4>Grand Total : {grandTotal} </h4>
+                    <div className={CartData != false ? 'visible card py-3 px-5' : 'invisible'}>
+                        <div>
+                            <h4>Grand Total : {grandTotal} </h4>
+                        </div>
                     </div>
-                    {/* </div> */}
                 </div>
 
             </div >

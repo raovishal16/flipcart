@@ -14,7 +14,7 @@ export const addCart = createSlice({
       state.data = cartData;
 
       let gTotal = 0;
-      cartData.map((item) => {
+      cartData?.map((item) => {
         gTotal += item.total;
       });
       state.finleAmt = gTotal;

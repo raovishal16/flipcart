@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/esm/Container";
 import axios from "axios";
 // import "./App.css";
-// import { FaStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
-// import { decrement, increment } from "../../Counter/Counter";
 
 // import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
@@ -69,8 +68,8 @@ const Dashboard = () => {
 
   return (
     <Container className="my-3">
-      <div className="row w-100">
-        <div className="col-3 col-md-3">
+      <div className="row gy-4 gx-3 w-100">
+        <div className="col-12 col-md-3">
           <div className="category">
             <div className="title py-1 px-2">
               <p className="h3">Category</p>
@@ -93,7 +92,7 @@ const Dashboard = () => {
           <div className="row gy-3 w-100">
             {filterProduct !== null &&
               filterProduct.map((item, index) => (
-                <div key={index} className="col-md-4">
+                <div key={index} className="col-md-4 col-12">
                   <div className="card proCard h-100">
                     <div className="product-img overflow-hidden">
                       <img
@@ -112,28 +111,14 @@ const Dashboard = () => {
                       </div>
                       <div className="card-text d-flex gap-2 align-items-center">
                         <p className="mb-0">{item.rating}</p>
-                        {/* <div className="rating">
+                        <div className="rating">
                           <FaStar className="text-warning" />
                           <FaStar className="text-warning" />
                           <FaStar className="text-warning" />
                           <FaStar className="text-warning" />
-                        </div> */}
+                        </div>
                       </div>
-                      {/* <div className="qty d-flex gap-3 align-items-center my-3">
-                        <button
-                          className="btn btn-primary"
-                          onClick={() => dispatch(increment())}
-                        >
-                          +
-                        </button>
-                        <div className="value">{count}</div>
-                        <button
-                          className="btn btn-primary"
-                          onClick={() => dispatch(decrement())}
-                        >
-                          -
-                        </button>
-                      </div> */}
+
                       <div className="product-buy-btn mt-4 d-flex justify-content-between align-items-center">
                         <div
                           className="btn py-2 px-3 text-light border-light fw-semibold"
